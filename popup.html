@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fan-Out Harvester</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <h1>Fan-Out Harvester</h1>
+  <div class="stats">
+    <span id="total">0</span> captured
+    <span class="sep">&middot;</span>
+    <span id="noFanout">0</span> no-fanout
+  </div>
+</header>
+
+<div class="actions">
+  <button id="exportBtn">Export CSV</button>
+  <button id="clearBtn" class="secondary">Clear</button>
+</div>
+
+<div id="results" class="results"></div>
+
+<template id="rowTemplate">
+  <div class="row">
+    <div class="row-head">
+      <span class="time"></span>
+      <span class="count"></span>
+    </div>
+    <div class="prompt"></div>
+    <ul class="queries"></ul>
+  </div>
+</template>
+
+<script src="popup.js"></script>
+</body>
+</html>
